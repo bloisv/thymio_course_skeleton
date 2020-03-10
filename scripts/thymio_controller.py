@@ -19,7 +19,7 @@ class ThymioController:
 
         self.name = rospy.get_param('~robot_name')
 
-        # log robot name toto console
+        # log robot name to console
         rospy.loginfo('Controlling %s' % self.name)
 
         # create velocity publisher
