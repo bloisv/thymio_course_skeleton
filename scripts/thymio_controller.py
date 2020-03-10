@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import sys
 import rospy
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Pose, Twist, Vector3
