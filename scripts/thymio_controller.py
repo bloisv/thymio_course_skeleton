@@ -9,15 +9,18 @@ from tf.transformations import euler_from_quaternion
 
 class ThymioController:
 
-    def __init__(self, name):
+    def __init__(self):
         """Initialization."""
-
-        self.name = name
 
         # initialize the node
         rospy.init_node(
             'thymio_controller'  # name of the node
         )
+
+        self.name = rospy.get_param('~robot_name')
+
+        # log robot name toto console
+        rospy.loginfo('Controlling %s' % self.name)
 
         # create velocity publisher
         self.velocity_publisher = rospy.Publisher(
@@ -120,7 +123,7 @@ class ThymioController:
 
 
 if __name__ == '__main__':
-    controller = ThymioController('/thymio10')
+    controller = ThymioController()
 
     try:
         controller.run()
