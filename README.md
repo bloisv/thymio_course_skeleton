@@ -4,7 +4,7 @@ Add the `thymio_course_skeleton` package to your `your_catkin_workspace`:
 
 ```
 cd <your_catkin_workspace>/src
-git clone https://github.com/romarcg/thymio_course_skeleton.git
+git clone https://github.com/Mirko-Nava/thymio_course_skeleton.git
 catkin build
 ```
 
@@ -37,8 +37,6 @@ Perform basic interfacing tasks:
 * A simple controller that sets constant velocities by publishing `cmd_vel` messages.
 * A subscriber that receives odometry information from simulation.
 
-`basic_move.py` indefinitely performs the above tasks on a simulated MyT. It requires the MyT's name to interface with the correct topics.
-
 ```
-rosrun thymio_course_skeleton basic_move.py thymio10
+roslaunch thymio_course_skeleton controller.launch
 ```
